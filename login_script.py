@@ -65,6 +65,7 @@ async def login(username, password, panel):
     finally:
         if page:
             await page.close()
+        await browser.close()
 
 async def main():
     global message
